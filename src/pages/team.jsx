@@ -1,7 +1,7 @@
-function team() {
+function Team() {
 
   return (
-    <div>team</div>
+    <div>hello team</div>
   )
 }
 

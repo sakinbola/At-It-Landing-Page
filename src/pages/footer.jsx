@@ -1,4 +1,4 @@
-function footer() {
+function Footer() {
 
   return (
     <div>footer</div>

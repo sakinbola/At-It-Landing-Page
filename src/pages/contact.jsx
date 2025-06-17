@@ -1,4 +1,4 @@
-function contact() {
+function Contact() {
 
   return (
     <div>contact</div>
@@ -6,3 +6,4 @@ function contact() {
 }
 
 export default Contact
+

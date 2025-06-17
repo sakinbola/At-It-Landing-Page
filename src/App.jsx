@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+
 import Hero from "./pages/hero.jsx";
 import Footer from "./pages/footer.jsx";
 import Contact from "./pages/contact.jsx";
@@ -12,26 +13,18 @@ import Team from "./pages/team.jsx";
 
 function App() {
   return (
-      <Router> 
-        {/* parent component enables nav system */}
-        <Header/>
-
-        <Routes>
-           {/* path / represnts landing page   */}
-            <Route path="/" element={
-            <> 
-              <Hero/>
-              <About/>
-              <Features/>
-              <Team/>
-              <Contact/>
-              <Footer/>
-            </>
-            } />
-        </Routes>
-      </Router>
+    <div>
+          <Header/>
+          <Hero/>
+          <About/>
+          <Features/>
+          <Team/>
+          <Contact/>
+          <Footer/>
+    </div>
 
   )
 }
+
 
 export default App

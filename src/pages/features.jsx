@@ -1,4 +1,4 @@
-function features() {
+function Features() {
 
   return (
     <div>features</div>

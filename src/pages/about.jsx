@@ -1,8 +1,5 @@
 
-
-
-
-function about() {
+function About() {
 
   return (
     <div>about</div>

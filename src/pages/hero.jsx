@@ -1,4 +1,4 @@
-function hero() {
+function Hero() {
 
   return (
     <div>hero</div>
