@@ -3,20 +3,19 @@
     background-size: cover;
     background-position: center;
     color: white;
-    font-weight: 800;
-    font-size:60px;
+    font-weight: 900px;
+    font-size:50px;
     min-height:150vh;
 
     display:flex;
     flex-direction: column;
 
+    padding:48px;
+
 }
 
 
-.hero1 {
+.hero-text {
     text-align: center;
-}
-
-.hero2 {
-    text-align: center;
+    margin-top: 48px;
 }
