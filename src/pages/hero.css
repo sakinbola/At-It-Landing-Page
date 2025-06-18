@@ -2,9 +2,6 @@
 .hero-container {
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center;  */
-    /* i dont know but it might look better this way the white on the edges gives some type of feel */
     margin:0px;
     padding: 0px;
 }
@@ -13,20 +10,28 @@
 
 
 .hero-image {
-    background-image: url(../img/Hero-Img.jpg);
+    background-image: url(../img/Hero-Img-2.jpg);
     background-size: cover;
     background-position: center;
     color: white;
-    min-height:125vh;
-    padding:102px;
+    min-height:150vh;
+    padding:0px;
 
+
+    /* margin-top:-200px;
+    clip-path: inset(200px 0 0 0);  */
+    /* you overlap the section above with 200px and then delete it with clip path  */
+    
 }
 
 .hero-text {
+    background-color:black;
+    color:white;
     text-align: center;
-    font-weight: 900px;
+    font-weight: 900;
     font-size:48px;
 
-    padding-top:
-
+    margin:0px;
+    padding-top:48px;
 }
+

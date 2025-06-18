@@ -8,19 +8,18 @@ function Hero() {
 
 
     <div className = "hero-container">
-        <div className = "hero-image" id = "home">
-
 
         <div className = "hero-text">
-              <h1 className = "hero1">
-                At-iT
-              </h1>
-              <h1 className = "hero2">
-                Coaching the Next Generation 
-              </h1>
-          </div>
+          <h1 className = "hero1">
+            At-iT
+          </h1>
+          <h1 className = "hero2">
+            Coaching the Next Generation 
+          </h1>
+        </div>
 
-
+        
+        <div className = "hero-image" id = "home">
         </div>
     </div>
   )
