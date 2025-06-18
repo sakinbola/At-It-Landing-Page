@@ -1,0 +1,22 @@
+.hero-image {
+    background-image: url(../img/Hero-Img.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-weight: 800;
+    font-size:60px;
+    min-height:150vh;
+
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+.hero1 {
+    text-align: center;
+}
+
+.hero2 {
+    text-align: center;
+}

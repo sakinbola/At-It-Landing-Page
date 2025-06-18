@@ -3,8 +3,7 @@ html {
 }
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 0; 
   /* includes padding and border in width and height of element  */
 
 }

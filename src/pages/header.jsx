@@ -7,26 +7,27 @@ function Header() {
 
 
   return (
-    <div className = "frame" id = "header">
+    <header className = "header">
+
       <nav className = "navLinks">
           <div className = "Logo">
             <a href="#home"> <img src="" alt="At-It Logo" />  </a>
           </div>
 
           <div className = "navItems"> 
-            <a href="#home"></a>
-            <a href="#about"></a>
-            <a href="#features"></a>
-            <a href="#team"></a>
-            <a href="#contact"></a>
+            <a href="#home"> Home </a>
+            <a href="#about"> About</a>
+            <a href="#features">Features</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
           </div>
 
 
           <div className = "signUpButton">
-            <a href="#contact" className="btn"> Sign Up </a>
+              <a href="#contact" className="btn">Sign Up</a>
           </div>
       </nav>
-    </div>
+    </header>
   )
 }
 
