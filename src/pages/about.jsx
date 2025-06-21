@@ -10,7 +10,7 @@ function About() {
 
         <h1> The Game's Missing Piece  </h1>
         <h2> Accessible Coaching at Your Fingertips</h2>
-        <h3> The greatest tragedy in sports isn't losing — it's never reaching your potential
+        <h3> The greatest tragedy in sports isn't losing — it's never reaching your potential <br></br>
         Our Mission is to close that gap </h3>
       </div>
 

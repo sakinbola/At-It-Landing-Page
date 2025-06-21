@@ -11,5 +11,29 @@
 
 .about-text {
     text-align:center;
+    display:flex;
+    flex-direction: column;
+    gap:62px;
 }
 
+.about-text h1 {
+    font-weight:900;
+    font-size:88pt;
+}
+
+.about-text h2 {
+    font-weight:700;
+    font-size:42pt;
+}
+
+.about-text h3 {
+    font-weight:500;
+    font-size:28pt;
+}
+
+
+
+.about-card {
+    width:385px;
+    height:575px;
+}
