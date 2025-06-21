@@ -1,0 +1,15 @@
+.about-section {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    padding-top:100px;
+    flex-direction:column;
+
+}
+
+
+.about-text {
+    text-align:center;
+}
+

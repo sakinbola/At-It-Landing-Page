@@ -1,4 +1,5 @@
 
+import "./about.css"
 function About() {
 
   return (
@@ -15,10 +16,19 @@ function About() {
 
 
       <div className = "about-img"> 
-        <img src="" alt="aboutimg1" />
-        <img src="" alt="aboutimg2" />
-        <img src="" alt="aboutimg3" />
-        <img src="" alt="aboutimg4" />
+
+          <div className = "about-card"> 
+            <img src="" alt="aboutimg1" />
+          </div>
+          <div className = "about-card"> 
+            <img src="" alt="aboutimg2" />
+          </div>
+          <div className = "about-card"> 
+            <img src="" alt="aboutimg3" />
+          </div>
+          <div className = "about-card"> 
+            <img src="" alt="aboutimg4" />
+          </div>
 
 
       </div>
@@ -26,9 +36,7 @@ function About() {
 
 
       
-      
-      
-      about</div>
+    </div>
   )
 }
 
