@@ -2,7 +2,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-top:100px;
+    margin-top:20vh;
     padding:0;
     flex-direction:column;
 
@@ -37,7 +37,7 @@
     flex-direction:row;
     justify-content: center;
     align-items:center;
-    margin-top:100px;
+    margin-top:30vh;
     padding:0;
     gap:48px;
 }
@@ -61,6 +61,18 @@
     display:block;
 }
 
-.aboutimg1 {
-    transform
+.about-card.card1 {
+    transform : rotate(15deg)  translateY(-15vh)
+}
+
+.about-card.card2 {
+    transform : rotate(-5deg)  translateY(5vh)
+}
+
+.about-card.card3 {
+    transform : rotate(5deg)  translateY(-15vh)
+}
+
+.about-card.card4 {
+    transform : rotate(10deg)  translateY(10vh)
 }

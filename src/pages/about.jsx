@@ -22,16 +22,16 @@ function About() {
 
       <div className = "about-img"> 
 
-          <div className = "about-card"> 
-            <img src= {aboutimg1} alt="aboutimg1" />
+          <div className = "about-card card1"> 
+            <img src= {aboutimg1} alt="aboutimg1" className ="about-card-img1" />
           </div>
-          <div className = "about-card"> 
+          <div className = "about-card card2"> 
             <img src={aboutimg2} alt="aboutimg2" />
           </div>
-          <div className = "about-card"> 
+          <div className = "about-card card3"> 
             <img src={aboutimg3} alt="aboutimg3" />
           </div>
-          <div className = "about-card"> 
+          <div className = "about-card card4"> 
             <img src={aboutimg4} alt="aboutimg4" />
           </div>
 
