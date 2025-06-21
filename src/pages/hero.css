@@ -35,3 +35,17 @@
     padding-top:48px;
 }
 
+
+.hero-button {
+    background-color:black;
+    text-align: center;
+
+    font-size:16px;
+    margin:0px;
+    padding:12px;
+}
+
+.hero-button a {
+    text-decoration: none;
+    color:white;
+}

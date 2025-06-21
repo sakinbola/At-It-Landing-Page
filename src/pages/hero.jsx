@@ -21,6 +21,10 @@ function Hero() {
         
         <div className = "hero-image" id = "home">
         </div>
+
+        <div className = "hero-button">
+          <a href="#contact" className="learn">Learn More Today</a>
+        </div>
     </div>
   )
 }
