@@ -1,5 +1,10 @@
 
 import "./about.css"
+import aboutimg1 from "../img/aboutimg1.jpg"
+import aboutimg2 from "../img/aboutimg2.jpg"
+import aboutimg3 from "../img/aboutimg3.jpg"
+import aboutimg4 from "../img/aboutimg4.jpg"
+
 function About() {
 
   return (
@@ -18,16 +23,16 @@ function About() {
       <div className = "about-img"> 
 
           <div className = "about-card"> 
-            <img src="" alt="aboutimg1" />
+            <img src= {aboutimg1} alt="aboutimg1" />
           </div>
           <div className = "about-card"> 
-            <img src="" alt="aboutimg2" />
+            <img src={aboutimg2} alt="aboutimg2" />
           </div>
           <div className = "about-card"> 
-            <img src="" alt="aboutimg3" />
+            <img src={aboutimg3} alt="aboutimg3" />
           </div>
           <div className = "about-card"> 
-            <img src="" alt="aboutimg4" />
+            <img src={aboutimg4} alt="aboutimg4" />
           </div>
 
 
