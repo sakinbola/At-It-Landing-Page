@@ -1,7 +1,13 @@
+import "./features.css"
+
+
 function Features() {
 
   return (
-    <div>features</div>
+    <div className="features-section">
+      <h1 className ="features-header"> Our Solution </h1>
+      
+    </div>
   )
 }
 
