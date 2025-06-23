@@ -14,50 +14,64 @@ function Team() {
 
 
         <div className="team-card"> 
-          <img src={photo1} alt="Team-Member-1" />
+
+          <div className="team-card-image ">
+            <img src={photo1} alt="Team-Member-1" />
+          </div>
+
+
             <div className =  "team-description"> 
-              <h2> hello</h2>
-              <p> Role </p>
-              <p> </p>
+              <h2> Joseph </h2>
+              <p className = "Role"> Co-Founder </p>
+              <p className = "Bio" > </p>
             </div>
         </div>
 
 
 
         <div className="team-card"> 
+
+          <div className="team-card-image ">
             <img src={photo2} alt="Team-Member-2" />
+          </div>
               <div className =  "team-description"> 
-                <h2>  hello</h2>
-                <p> Role </p>
-                <p></p>
+                <h2> Efe </h2>
+              <p className = "Role"> Co-Founder </p>
+              <p className = "Bio" > </p>
               </div>
         </div>
 
 
         <div className="team-card"> 
-          <img src="" alt="Team-Member-3" />
+              <div className="team-card-image ">
+                <img src="" alt="Team-Member-3" />
+              </div>
             <div className =  "team-description"> 
-              <h2> </h2>
-                <p> Role </p>
-                <p></p>
+              <h2> Seyi </h2>
+              <p className = "Role"> Front-End Developer </p>
+              <p className = "Bio" > </p>
             </div>
         </div>
 
         <div className="team-card"> 
-          <img src="" alt="Team-Member-4" />
+              <div className="team-card-image ">
+                <img src="" alt="Team-Member-4" />
+              </div>
             <div className =  "team-description"> 
-              <h2> </h2>
-                <p> Role </p>
-                <p></p>
+              <h2> Juan Pablo Camacho </h2>
+              <p className = "Role"> Role </p>
+              <p className = "Bio" > </p>
             </div>        
           </div>
           
         <div className="team-card"> 
-          <img src="" alt="Team-Member-5" />
+              <div className="team-card-image ">
+                <img src="" alt="Team-Member-5" />
+              </div>
               <div className =  "team-description"> 
               <h2> </h2>
-                <p> Role </p>
-                <p></p>
+              <p className = "Role"> Role </p>
+              <p className = "Bio" > </p>
             </div>
         </div>
       
