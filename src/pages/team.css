@@ -1,0 +1,54 @@
+.team-section {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:5rem;
+    
+}
+
+.team-section h1{
+    font-weight:900;
+    font-size:5rem;
+}
+
+.team-section-cards {
+    max-width:80vw;
+    display:flex;
+    flex-direction:row;
+    align-items: center ;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:5rem;
+}
+
+
+
+
+.team-card {
+    width:300px;
+    height:500px;
+    border-radius:20px;
+    background:#D9D9D9;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    margin:0;
+}
+
+
+.team-card img {
+    width: 240px;  /* fixed size */
+    height: 320px; /* fixed size */
+    border-radius: 50%; /* keep it circular */
+    object-fit: cover;
+    margin: 20px auto; /* center it in the card */
+}
+
+.team-description{
+    height:40%;
+    padding:40px;
+    text-align:center;
+}

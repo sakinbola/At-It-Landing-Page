@@ -39,7 +39,7 @@ function Features() {
   // cleanup functioin if the dependnceis change to disconnect observer api 
 
   return (
-    <div className="features-section">
+    <div className="features-section" id="features">
       <h1 className ="features-header"> Our Solution </h1>
       
 
