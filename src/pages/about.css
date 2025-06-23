@@ -13,22 +13,22 @@
     text-align:center;
     display:flex;
     flex-direction: column;
-    gap:62px;
+    gap:3.875rem;
 }
 
 .about-text h1 {
     font-weight:900;
-    font-size:88pt;
+    font-size:5.5rem;
 }
 
 .about-text h2 {
     font-weight:700;
-    font-size:42pt;
+    font-size:2.625rem;
 }
 
 .about-text h3 {
     font-weight:500;
-    font-size:28pt;
+    font-size:1.75rem;
 }
 
 

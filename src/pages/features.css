@@ -1,10 +1,70 @@
 
 .features-section {
     margin-top: 40vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding: 8rem 0;
 }
+
 
 .features-section .features-header {
     text-align:center;
     font-weight:900;
-    font-size:88pt;
+    font-size:7rem;
+    margin-bottom:20vh
+}
+
+
+.features-section-text {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:5rem;
+    text-align:center;
+
+
+}
+
+
+.features-block {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    gap:3rem;
+
+    padding: 0 1rem;
+}
+
+.features-block h2 {
+    font-weight:900;
+    font-size:2.5rem;
+}
+
+.features-block p {
+    font-size:1rem;
+    line-height:1.5rem;
+    
+    min-height:6.6rem;
+    /*  */
+}
+
+
+.features-block .upper {
+    width:3rem;
+    height:3rem;
+}
+
+.features-block .lower {
+    width:12rem;
+    height:12rem;
+}
+
+.features-block .football-field {
+    width:12rem;
+    height:12rem;
 }
