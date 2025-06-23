@@ -5,7 +5,38 @@ import featuresvideo1 from "../video/Featuresvideo1.mp4"
 
 import {useRef,useEffect} from "react";
 
+import ReactPlayer from "react-player";
+
+// future add customized video controls that look better 
+
+
 function Features() {
+
+  const videoRef = useRef(null);
+
+
+  useEffect(()=> {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (videoRef.current) {
+          if (!entry.isIntersecting) {
+            videoRef.current.pause();
+          }
+        }
+      },
+      {threshold:0.1}
+    );
+
+    if (videoRef.current) observer.observe(videoRef.current);
+    return () => observer.disconnect();
+  },[]);
+
+  // understanding so 
+  // i initalzie a videoRef for the video object 
+  // observer uses the interesction observer api when entry so i come into view
+  // it checks if videoRef exists then if i eveyr leave the intersection it pauses i assume thrheshol means 0.1 sec
+  // if videoRef.current exists and obserbers sees videoRef.current ? i dont what thats for then
+  // cleanup functioin if the dependnceis change to disconnect observer api 
 
   return (
     <div className="features-section">
@@ -84,8 +115,9 @@ function Features() {
 
           <div className="features-video-card">
               <video 
+                ref={videoRef}
                 className="features-video"
-                controls
+                controls = {true}
                 width="100%"
                 >
                 <source src={featuresvideo1} type="video/mp4"  />
