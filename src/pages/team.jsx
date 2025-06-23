@@ -35,7 +35,7 @@ function Team() {
             <img src={photo2} alt="Team-Member-2" />
           </div>
               <div className =  "team-description"> 
-                <h2> Efe </h2>
+                <h2> Efe Ogolo</h2>
               <p className = "Role"> Co-Founder </p>
               <p className = "Bio" > </p>
               </div>
@@ -47,7 +47,7 @@ function Team() {
                 <img src="" alt="Team-Member-3" />
               </div>
             <div className =  "team-description"> 
-              <h2> Seyi </h2>
+              <h2> Seyi Akinbola </h2>
               <p className = "Role"> Front-End Developer </p>
               <p className = "Bio" > </p>
             </div>
@@ -69,7 +69,7 @@ function Team() {
                 <img src="" alt="Team-Member-5" />
               </div>
               <div className =  "team-description"> 
-              <h2> </h2>
+              <h2> Jennifer </h2>
               <p className = "Role"> Role </p>
               <p className = "Bio" > </p>
             </div>

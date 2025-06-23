@@ -126,6 +126,10 @@ function Features() {
           </div>
 
 
+          <div className = "signUpNowButton">
+              <a href="#contact" className="btn">Sign Up Now</a>
+          </div>
+
 
 
       </div>
