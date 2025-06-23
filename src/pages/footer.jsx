@@ -1,7 +1,20 @@
+import "./footer.css"
+
+
 function Footer() {
 
   return (
-    <div>footer artwork upslplash give credit</div>
+    <footer className = "footer">
+
+          <div className = "Logo">
+            <a href="#home"> <img src="" alt="At-It Logo" />  </a>
+          </div>
+
+          <div className = "slogan"> 
+              <p> At-It Coaching the Next Generation</p>
+          </div>
+
+    </footer>
   )
 }
 

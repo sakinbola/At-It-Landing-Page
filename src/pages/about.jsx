@@ -23,16 +23,16 @@ function About() {
       <div className = "about-img"> 
 
           <div className = "about-card card1"> 
-            <img src= {aboutimg1} alt="aboutimg1" className ="about-card-img1" />
+            <img src= {aboutimg1} alt="aboutimg1" className ="about-card-img1" loading="lazy" />
           </div>
           <div className = "about-card card2"> 
-            <img src={aboutimg2} alt="aboutimg2" />
+            <img src={aboutimg2} alt="aboutimg2" loading="lazy" />
           </div>
           <div className = "about-card card3"> 
-            <img src={aboutimg3} alt="aboutimg3" />
+            <img src={aboutimg3} alt="aboutimg3" loading="lazy" />
           </div>
           <div className = "about-card card4"> 
-            <img src={aboutimg4} alt="aboutimg4" />
+            <img src={aboutimg4} alt="aboutimg4"  loading="lazy"/>
           </div>
 
 
