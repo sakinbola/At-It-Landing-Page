@@ -99,10 +99,10 @@
 
 }
 
-.features-video {
+.features-video-card video{
     width:100%;
     height: 100%;
-    object-fit:cover;
+    object-fit:contain;
     display:block;
 
 }
