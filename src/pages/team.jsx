@@ -1,6 +1,6 @@
 import "./team.css"
 import photo1 from "../img/teamPhoto1.jpg"
-import photo2 from "../img/teamPhoto2.png"
+import photo2 from "../img/teamPhoto2.jpg"
 
 function Team() {
 
@@ -48,7 +48,7 @@ function Team() {
               </div>
             <div className =  "team-description"> 
               <h2> Seyi Akinbola </h2>
-              <p className = "Role"> Front-End Developer </p>
+              <p className = "Role"> Full Stack Developer </p>
               <p className = "Bio" > </p>
             </div>
         </div>
