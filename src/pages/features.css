@@ -1,6 +1,6 @@
 
 .features-section {
-    margin-top: 40vh;
+
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -50,7 +50,7 @@
     line-height:1.5rem;
     
     min-height:6.6rem;
-    /*  */
+    /* purpose is for  */
 }
 
 
@@ -67,4 +67,42 @@
 .features-block .football-field {
     width:12rem;
     height:12rem;
+}
+
+
+
+.features-video-section {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    
+    margin-top:20vh;
+
+    gap:3rem;
+}
+
+
+.features-video-caption {
+    font-weight:900;
+    font-size:2.5rem;
+}
+
+
+.features-video-card {
+    width:60vw;
+    height:80vh;
+    border-radius:40px;
+
+    overflow:hidden;
+
+}
+
+.features-video {
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    display:block;
+
 }

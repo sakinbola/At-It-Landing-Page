@@ -1,6 +1,10 @@
 import "./features.css"
 import featuresimg1 from "../img/featuresimage1.jpg"
 
+import featuresvideo1 from "../video/Featuresvideo1.mp4"
+
+import {useRef,useEffect} from "react";
+
 function Features() {
 
   return (
@@ -18,7 +22,7 @@ function Features() {
 
           <h2> Upload </h2>
           
-          <p> Simple Upload your Game Film  <br></br> from your Iphone , Hudl or DV  Sports </p>
+          <p> Upload your Game Film </p>
 
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="lower icon-upload">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -41,7 +45,7 @@ function Features() {
 
             <h2> Analyze </h2>
 
-            <p> Analyzed By Our Algorithm made  <br></br> by Football Players for Football Players </p>
+            <p> Our Algorithm made by Football Players for Football Players </p>
 
             <svg  viewBox="0 0 229 229" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5" stroke="currentColor" className="lower stocks">
               <path d="M218.25 114.5H192.52C187.986 114.49 183.573 115.966 179.957 118.702C176.341 121.437 173.72 125.282 172.496 129.648L148.115 216.382C147.958 216.921 147.63 217.395 147.181 217.731C146.732 218.068 146.186 218.25 145.625 218.25C145.064 218.25 144.518 218.068 144.069 217.731C143.62 217.395 143.292 216.921 143.135 216.382L85.865 12.6175C85.7079 12.0787 85.3802 11.6055 84.9312 11.2687C84.4823 10.932 83.9362 10.75 83.375 10.75C82.8138 10.75 82.2677 10.932 81.8188 11.2687C81.3698 11.6055 81.0421 12.0787 80.885 12.6175L56.5037 99.3525C55.2843 103.701 52.6793 107.533 49.0842 110.267C45.4891 113.001 41.1002 114.487 36.5837 114.5H10.75" stroke="black" stroke-width="20.75" stroke-linecap="round" stroke-linejoin="round"/>
@@ -66,6 +70,30 @@ function Features() {
 
 
             </div>
+
+
+      </div>
+
+
+
+
+      <div className="features-video-section">
+          <div className="features-video-caption">
+            <h2> Experience It </h2>
+          </div>
+
+          <div className="features-video-card">
+              <video 
+                className="features-video"
+                controls
+                width="100%"
+                >
+                <source src={featuresvideo1} type="video/mp4"  />
+                Your browser does not support this video
+              </video>
+          </div>
+
+
 
 
       </div>
