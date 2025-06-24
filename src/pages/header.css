@@ -34,7 +34,7 @@
     align-items:center;
     justify-content: center;
     gap:60px;
-    font-size:8pt
+    font-size:8pt;
 }
 
 .signUpButton .btn {
@@ -63,4 +63,76 @@
 .signUpButton .btn:focus {
     outline: 2px solid black;
     outline-offset: 2px;
+}
+
+
+.hamburger {
+    display:none;
+}
+
+@media (max-width:765px) {
+ .navLinks {
+        padding: 10px 20px;
+    }
+    
+    .navItems {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        z-index: 1000;
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    .navItems.open {
+        display: flex;
+    }
+    
+    .navItems a {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        min-width: 120px;
+        text-align: center;
+    }
+    
+    .navItems a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+        padding: 5px;
+    }
+    
+    .signUpButton {
+        z-index: 1001;
+        position: relative;
+    }
+    
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }

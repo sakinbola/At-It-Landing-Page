@@ -16,6 +16,9 @@ function Features() {
 
 
   useEffect(()=> {
+
+    // default root is browser viewport 
+    // root margin is default 0px;
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (videoRef.current) {
@@ -24,12 +27,15 @@ function Features() {
           }
         }
       },
-      {threshold:0.1}
+      {threshold:0.1} 
+      // when 10percent of the target is visible 
     );
 
     if (videoRef.current) observer.observe(videoRef.current);
     return () => observer.disconnect();
   },[]);
+
+
 
   // understanding so 
   // i initalzie a videoRef for the video object 

@@ -15,3 +15,32 @@ body {
   background: white;
   min-height: 100vh;
 }
+
+
+/* Large tablet */
+@media (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Tablet/small laptop */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 320px) {
+    html {
+        font-size: 12px;
+    }
+}
