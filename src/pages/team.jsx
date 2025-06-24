@@ -1,6 +1,8 @@
-import "./team.css"
-import photo1 from "../img/teamPhoto1.jpg"
-import photo2 from "../img/teamPhoto2.jpg"
+import "./team.css";
+import photo1 from "../img/teamPhoto1.jpg";
+import photo2 from "../img/teamPhoto2.jpg";
+
+
 
 function Team() {
 
