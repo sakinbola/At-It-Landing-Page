@@ -78,11 +78,11 @@ function Contact() {
 
 
   return (
-    <div className="contact-section"> 
+    <div className="contact-section" id="contact"> 
       <h1> Get Early Access </h1>
 
 
-      <div className="contact-section-elements" id="contact">
+      <div className="contact-section-elements">
 
 
 

@@ -2,7 +2,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-top:10rem;
+    margin-top: clamp(4rem, 10vh, 10rem);
     padding:0;
     flex-direction:column;
 
@@ -13,22 +13,27 @@
     text-align:center;
     display:flex;
     flex-direction: column;
-    gap:3.875rem;
+    gap:clamp(1.5rem, 5vw, 3.875rem);
+
+    max-width: 90%;
+    margin: 0  auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .about-text h1 {
     font-weight:900;
-    font-size:5.5rem;
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
 }
 
 .about-text h2 {
     font-weight:700;
-    font-size:2.625rem;
+    font-size: clamp(1.5rem, 4.5vw, 2.625rem);
 }
 
 .about-text h3 {
     font-weight:500;
-    font-size:1.75rem;
+    font-size: clamp(1rem, 3vw, 1.75rem); 
 }
 
 
@@ -37,20 +42,29 @@
     flex-direction:row;
     justify-content: center;
     align-items:center;
-    margin-top:30vh;
+    margin-top:clamp(5rem, 15vh, 10rem);
     padding:0;
-    gap:48px;
+    gap:clamp(1rem, 3vw, 48px);
+    
+    flex-wrap:wrap;
+    max-width: 1500px;
+    padding:0;
 }
 
 
 .about-card {
-    width:300px;
-    height:500px;
+    width:clamp(200px, 20vw + 100px, 300px);
+    height:clamp(350px, 35vw + 100px, 500px);
     border-radius:20px;
 
     background:#D9D9D9;
 
     overflow:hidden;
+
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 300px;
+    max-width:300px;
 
 }
 
@@ -62,7 +76,7 @@
 }
 
 .about-card.card1 {
-    transform : rotate(15deg)  translateY(-15vh)
+    transform : rotate(15deg)  translateY(-5vh)
 }
 
 .about-card.card2 {
@@ -70,7 +84,7 @@
 }
 
 .about-card.card3 {
-    transform : rotate(5deg)  translateY(-15vh)
+    transform : rotate(5deg)  translateY(10vh)
 }
 
 .about-card.card4 {
