@@ -6,7 +6,7 @@
     align-items:center;
     justify-content:center;
 
-    padding: clamp(4rem, 10vh, 8rem) 1rem; 
+    padding: clamp(4rem, 15vh, 10rem) 1rem; 
     box-sizing: border-box;
 }
 
