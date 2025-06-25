@@ -4,6 +4,7 @@
     flex-direction: column;
     margin:0px;
     padding: 0px;
+    
 }
 
 
@@ -14,10 +15,10 @@
     background-size: cover;
     background-position: center;
     color: white;
-    min-height:70vh;
+    min-height:135vh;
     max-height:800px;
     padding:0px;
-
+    border: none;
 
     /* margin-top:-200px;
     clip-path: inset(200px 0 0 0);  */
@@ -35,6 +36,7 @@
     margin:0px;
     padding-top: clamp(1rem, 5vw, 3rem);
     padding-bottom: clamp(1rem, 5vw, 3rem); 
+    border: none;
 }
 
 
@@ -50,4 +52,11 @@
 .hero-button a {
     text-decoration: none;
     color:white;
+}
+
+
+@media (max-width:1440px) {
+    .hero-image {
+        min-height:70vw;
+    }
 }
