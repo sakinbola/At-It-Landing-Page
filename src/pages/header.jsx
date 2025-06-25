@@ -57,7 +57,7 @@ function Header() {
             </div>
 
             
-      </nav>
+      </nav> 
     </header>
   )
 }
