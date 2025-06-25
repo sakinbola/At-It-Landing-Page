@@ -93,3 +93,10 @@
 .about-card.card4 {
     transform : rotate(10deg)  translateY(10vh)
 }
+
+
+@media (max-width:1024px) {
+    .about-card.card1{
+        display:none;
+    }
+}
