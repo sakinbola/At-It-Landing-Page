@@ -23,7 +23,7 @@ function Team() {
 
 
             <div className =  "team-description"> 
-              <h2> Joseph M</h2>
+              <h2> Joseph Makanju </h2>
               <p className = "Role"> Co-Founder </p>
               <p className = "Bio" > </p>
             </div>
@@ -50,7 +50,7 @@ function Team() {
               </div>
             <div className =  "team-description"> 
               <h2> Seyi Akinbola </h2>
-              <p className = "Role"> Full Stack Developer </p>
+              <p className = "Role"> Role </p>
               <p className = "Bio" > </p>
             </div>
         </div>
