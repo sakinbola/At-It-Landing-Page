@@ -10,6 +10,12 @@
 
 }
 
+.Logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
+
 .navLinks {
     display:flex;
     flex-direction: row;
@@ -27,6 +33,7 @@
 .navLinks a:hover {
     text-decoration: underline;
 }
+
 
 
 .navItems {

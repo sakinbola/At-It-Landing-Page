@@ -61,7 +61,7 @@
     font-size:1rem;
     line-height:1.5rem;
     
-    min-height:6.6rem;
+    /* min-height:6.6rem; */
     /* purpose is for  */
 }
 
@@ -104,15 +104,14 @@
 }
 
 
-.features-video-card {
+/* .features-video-card {
     width:60vw;
     height:80vh;
-    border-radius:40px;
 
     overflow:hidden;
     max-width: 960px;
     max-height: 540px;
-}
+} */
 
 .features-video-card video{
     width:100%;
