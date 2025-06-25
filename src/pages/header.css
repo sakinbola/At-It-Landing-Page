@@ -14,7 +14,7 @@
     display:flex;
     flex-direction: row;
     margin:0;
-    padding:10px 120px;
+    padding:10px clamp(1rem,5vw,120px);
     align-items: center;
     justify-content: space-between;
 }
@@ -33,19 +33,19 @@
     display:flex;
     align-items:center;
     justify-content: center;
-    gap:60px;
-    font-size:8pt;
+    gap: clamp(1.5rem, 4vw, 60px);
+    font-size:0.8rem;
 }
 
 .signUpButton .btn {
     display: inline-block; /* Makes the anchor behave like a button */
     background-color: white;
     color: black;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border: 0 solid;
     border-radius: 16px;
     font-weight: 600;
-    font-size: 8pt;
+    font-size: 0.8rem;
     text-decoration: none; /* Remove underline */
     cursor: pointer;
     transition: background 0.5s, color 0.5s, opacity 0.5s;
@@ -69,6 +69,8 @@
 .hamburger {
     display:none;
 }
+
+
 
 @media (max-width:765px) {
  .navLinks {
