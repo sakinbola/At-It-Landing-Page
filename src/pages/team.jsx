@@ -1,7 +1,7 @@
 import "./team.css";
 import photo1 from "../img/teamPhoto1.jpg";
 import photo2 from "../img/teamPhoto2.jpg";
-
+import photo3 from "../img/teamPhoto3.jpg";
 
 
 function Team() {
@@ -46,33 +46,11 @@ function Team() {
 
         <div className="team-card"> 
               <div className="team-card-image ">
-                <img src="" alt="Team-Member-3" />
+                <img src={photo3} alt="Team-Member-3" />
               </div>
             <div className =  "team-description"> 
               <h3> Seyi Akinbola </h3>
-              <p className = "Role"> Role </p>
-              <p className = "Bio" > </p>
-            </div>
-        </div>
-
-        <div className="team-card"> 
-              <div className="team-card-image ">
-                <img src="" alt="Team-Member-4" />
-              </div>
-            <div className =  "team-description"> 
-              <h3> Juan Pablo Camacho </h3>
-              <p className = "Role"> Role </p>
-              <p className = "Bio" > </p>
-            </div>        
-          </div>
-          
-        <div className="team-card"> 
-              <div className="team-card-image ">
-                <img src="" alt="Team-Member-5" />
-              </div>
-              <div className =  "team-description"> 
-              <h3> Jennifer </h3>
-              <p className = "Role"> Role </p>
+              <p className = "Role"> Front-End Developer </p>
               <p className = "Bio" > </p>
             </div>
         </div>
