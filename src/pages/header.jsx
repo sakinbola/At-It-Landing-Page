@@ -48,7 +48,7 @@ function Header() {
 
 
           <div className = "signUpButton">
-              <a href="#contact" className="btn">Sign Up</a>
+              <a href="#contact" className="btn">Be The First To Know</a>
           </div>
 
 

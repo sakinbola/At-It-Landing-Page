@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-.team-section h1{
+.team-section h2{
     font-weight:900;
     font-size:clamp(3rem, 10vw, 5rem);
     text-align: center;
@@ -81,7 +81,7 @@ team-card:hover img {
     text-align:center;
 }
 
-.team-description h2 {
+.team-description h3 {
     font-size:clamp(1rem, 2.5vw, 1.25rem);
     font-weight:600;
     margin-bottom: 0.5rem;

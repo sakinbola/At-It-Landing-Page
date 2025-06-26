@@ -9,7 +9,7 @@ function Team() {
   return (
     <div className="team-section" id="team"> 
 
-        <h1> The Team </h1>
+        <h2> The Team </h2>
 
 
       <div className = "team-section-cards"> 
@@ -23,7 +23,7 @@ function Team() {
 
 
             <div className =  "team-description"> 
-              <h2> Joseph Makanju </h2>
+              <h3> Joseph Makanju </h3>
               <p className = "Role"> Co-Founder </p>
               <p className = "Bio" > </p>
             </div>
@@ -37,7 +37,7 @@ function Team() {
             <img src={photo2} alt="Team-Member-2" />
           </div>
               <div className =  "team-description"> 
-                <h2> Efe Ogolo</h2>
+                <h3> Efe Ogolo</h3>
               <p className = "Role"> Co-Founder </p>
               <p className = "Bio" > </p>
               </div>
@@ -49,7 +49,7 @@ function Team() {
                 <img src="" alt="Team-Member-3" />
               </div>
             <div className =  "team-description"> 
-              <h2> Seyi Akinbola </h2>
+              <h3> Seyi Akinbola </h3>
               <p className = "Role"> Role </p>
               <p className = "Bio" > </p>
             </div>
@@ -60,7 +60,7 @@ function Team() {
                 <img src="" alt="Team-Member-4" />
               </div>
             <div className =  "team-description"> 
-              <h2> Juan Pablo Camacho </h2>
+              <h3> Juan Pablo Camacho </h3>
               <p className = "Role"> Role </p>
               <p className = "Bio" > </p>
             </div>        
@@ -71,7 +71,7 @@ function Team() {
                 <img src="" alt="Team-Member-5" />
               </div>
               <div className =  "team-description"> 
-              <h2> Jennifer </h2>
+              <h3> Jennifer </h3>
               <p className = "Role"> Role </p>
               <p className = "Bio" > </p>
             </div>

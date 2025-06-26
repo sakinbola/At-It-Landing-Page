@@ -79,7 +79,7 @@ function Contact() {
 
   return (
     <div className="contact-section" id="contact"> 
-      <h1> Get Early Access </h1>
+      <h2> Get Early Access </h2>
 
 
       <div className="contact-section-elements">
@@ -131,7 +131,7 @@ function Contact() {
 
                 <p> {isSubmit && formErrors.userMessage} </p>
 
-                <input type="submit" value="Register">
+                <input type="submit" value="Notify Me">
                 </input>
 
 

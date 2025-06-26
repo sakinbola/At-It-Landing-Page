@@ -10,9 +10,16 @@ function Hero() {
     <div className = "hero-container">
 
         <div className = "hero-text">
+          <div className="tag1"> 
+            <h2 className = "tagline">
+                At-iT 
+            </h2>
+          </div>
+          <div  className="tag2">
             <h1 className = "tagline">
-              At-iT <br></br> Coaching the Next Generation 
+              Coaching the Next Generation 
             </h1>
+          </div>
         </div>
 
         
