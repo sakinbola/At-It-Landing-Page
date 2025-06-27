@@ -32,6 +32,9 @@ function Contact() {
       console.log("Form submitted successfully",formValues);
       setSubmissionStatus("success")
 
+      function send_email_values(fromValues.userName ,formValues.password , formValues.userMessage){
+          return [fromValues.userName ,formValues.password , formValues.userMessage]
+      }
 
       
       // setFormValues(initalValues); // Reset form fields
@@ -92,7 +95,7 @@ function Contact() {
               {/* this is just to see the values in the console */}
 
 
-              <form onSubmit={handleSubmit} action="" method="Post" noValidate>
+              <form onSubmit={handleSubmit} action="/submit" method="Post" noValidate>
                 {/* action where browswer sends info method post sens data in body of http request */}
                 <div className="form-child"> 
                   <label for="name"> Name: </label>
