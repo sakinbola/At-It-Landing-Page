@@ -1,5 +1,5 @@
 import "./footer.css"
-
+import logo_picture from "../img/logo.png"
 
 function Footer() {
 
@@ -7,7 +7,7 @@ function Footer() {
     <footer className = "footer">
 
           <div className = "Logo">
-            <a href="#home"> <img src="" alt="At-It Logo" />  </a>
+            <a href="#home"> <img src={logo_picture} alt="At-It Logo" />  </a>
           </div>
 
           <div className = "slogan"> 

@@ -1,7 +1,7 @@
 import "./header.css"
 import Hamburger from "../components/hamburger.jsx"
 import {useState,useEffect} from "react"
-
+import logo_picture from "../img/logo.png"
 
 function Header() {
   const [HamburgerOpen,setHamburgerOpen] = useState(false)
@@ -35,7 +35,7 @@ function Header() {
 
       <nav className = "navLinks">
           <div className = "Logo">
-            <a href="#home"> <img src="" alt="At-It Logo" />  </a>
+            <a href="#home"> <img src={logo_picture} alt="At-It Logo" />  </a>
           </div>
 
         <div className={`navItems ${HamburgerOpen ? 'open' : ''}`}>

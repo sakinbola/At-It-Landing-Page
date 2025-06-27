@@ -11,7 +11,7 @@
 }
 
 .Logo img {
-    max-width: 100%;
+    width: clamp(3rem,4vw,5rem);
     height: auto;
     display: block; 
 }
