@@ -11,6 +11,9 @@ function Contact() {
   const [formErrors,setFormErrors] = useState({});
   const [isSubmit, setisSubmit] = useState(false);  
   const [submissionStatus, setSubmissionStatus] = useState("initial");
+
+  const[loading,setLoading] = useState(false);
+  const[messageHandling,setMessageHandling] = useState("");
   // e is event object so the input element for whatever trigger handleChange 
 // e.target refers to the dom element 
 
@@ -32,18 +35,8 @@ function Contact() {
       console.log("Form submitted successfully",formValues);
       setSubmissionStatus("success")
 
-      // function send_email_values(fromValues.userName ,formValues.password , formValues.userMessage){
-      //     return [fromValues.userName ,formValues.password , formValues.userMessage]
-      // }
 
       
-      // setFormValues(initalValues); // Reset form fields
-      // setSubmissionStatus("initial");
-      // setFormErrors({});      // <-- Clear errors
-      // setisSubmit(false);     // <-- Reset submit state
-      // possibility of resetting to inital after 
-      
-          // reset form 
     } else if (isSubmit) {
       setSubmissionStatus("error")
     }
@@ -52,10 +45,65 @@ function Contact() {
 
 
 // when submit send to validate change issubmit to true 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
+    const currentErrors = validate(formValues)
+    setFormErrors(currentErrors);
+    // react async so currentErros is uptodate setformerrors updates when that batch updates
     setisSubmit(true);
+
+    
+    if(Object.keys(formErrors).length === 0) {
+      setSubmissionStatus("loading")
+
+      try {
+        const response = await fetch("http://localhost:5000/api/send-email",{
+          method:"POST",
+
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body : JSON.stringify({
+            name:formValues.userName,
+            email:formValues.userEmail,
+            message:formValues.userMessage,
+
+          })
+
+        });
+
+        
+
+        const result = await.response.json();
+
+        if (response.ok) {
+          setMessage("Message sent sucessfully")
+
+            setFormValues(initalValues); // Reset form fields
+            setSubmissionStatus("initial");
+            setFormErrors({});      // <-- Clear errors
+            setisSubmit(false);     // <-- Reset submit state
+
+          // reset form 
+        } 
+        else {
+          setMessageHandling(`Error: ${result.error}`)
+        }
+
+      }
+
+        catch(error) {
+          setMessageHandling("Failed to send message. Please try")
+        }
+        finally {
+          setSubmissionStatus("inital")
+        }
+
+        
+      }
+
+    }
   }
 
 
@@ -95,7 +143,7 @@ function Contact() {
               {/* this is just to see the values in the console */}
 
 
-              <form onSubmit={handleSubmit} action="/submit" method="Post" noValidate>
+              <form onSubmit={handleSubmit} action="" method="Post" noValidate>
                 {/* action where browswer sends info method post sens data in body of http request */}
                 <div className="form-child"> 
                   <label for="name"> Name: </label>
@@ -114,7 +162,7 @@ function Contact() {
                   id="email" 
                   name="userEmail" 
                   placeholder="you@example.comn" 
-                  value={formValues.email} 
+                  value={formValues.usrEmail} 
                   onChange = {handleChange} 
                   ></input>
                 </div>
@@ -127,7 +175,7 @@ function Contact() {
                   id="message" 
                   name="userMessage" 
                   placeholder="Tell us your Thoughts" 
-                  value={formValues.message} 
+                  value={formValues.userMessage} 
                   onChange = {handleChange}
                   />
                 </div>
@@ -153,6 +201,12 @@ function Contact() {
                 {submissionStatus === "initial" && (
                   <div>
                     <p className="contact-submission-result initial-message"> Fill out the Form above to get early access ! </p>
+                  </div>
+                )}
+
+                {submissionStatus === "loading" && (
+                  <div>
+                    <p className="contact-submission-result initial-message"> {messageHandling} </p>
                   </div>
                 )}
               </form>
