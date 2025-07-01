@@ -1,5 +1,11 @@
-from flask import Flask,render_template,request,redirect,url_for
-from flask_mail import Mail,Message 
+from flask import Flask,request,jsonify
+from flask_cors import CORS
+import smtplib
+# simple mail transfer protocol 
+from email.mime.text import MINEText
+from email.mime.multipart import MINEMultipart 
+# mime text multipurpose internal mail extension 
+# creates message and email structure 
 import os 
 from dotenv import load_dotenv 
 # from "./src/pages/contact.jsx" import send_email_values

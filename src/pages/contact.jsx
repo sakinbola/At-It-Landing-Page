@@ -32,9 +32,9 @@ function Contact() {
       console.log("Form submitted successfully",formValues);
       setSubmissionStatus("success")
 
-      function send_email_values(fromValues.userName ,formValues.password , formValues.userMessage){
-          return [fromValues.userName ,formValues.password , formValues.userMessage]
-      }
+      // function send_email_values(fromValues.userName ,formValues.password , formValues.userMessage){
+      //     return [fromValues.userName ,formValues.password , formValues.userMessage]
+      // }
 
       
       // setFormValues(initalValues); // Reset form fields
