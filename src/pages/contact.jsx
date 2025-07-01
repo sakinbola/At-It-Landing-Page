@@ -75,7 +75,7 @@ function Contact() {
 
         
 
-        const result = await.response.json();
+        const result = await response.json();
 
         if (response.ok) {
           setMessage("Message sent sucessfully")
