@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/At-It-Landing-Page/',
   build: {
-    outDir: 'docs'
+    outDir: 'dist'
   }
 })
