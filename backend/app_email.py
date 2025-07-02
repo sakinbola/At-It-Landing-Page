@@ -62,7 +62,7 @@ def send_email():
 
     except Exception as e:
         # error occured get rid of db 
-        db.session.rollbakc()
+        db.session.rollback()
         return jsonify({"error":str(e)}),500
 
 
