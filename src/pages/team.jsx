@@ -50,7 +50,7 @@ function Team() {
               </div>
             <div className =  "team-description"> 
               <h3> Seyi Akinbola </h3>
-              <p className = "Role"> Front-End Developer </p>
+              <p className = "Role"> Full-Stack Developer </p>
               <p className = "Bio" > </p>
             </div>
         </div>
