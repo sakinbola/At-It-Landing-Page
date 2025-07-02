@@ -84,7 +84,7 @@ def send_user_email(name,email):
 
     msg = MIMEMultipart()
     msg["From"] = sender_email
-    msg["To"] = sender_email 
+    msg["To"] = email
     msg["Subject"] = f"\U0001F389 You're In! Welcome to the At-iT Beta Team"
     # unicode for party hat emoji 
     
