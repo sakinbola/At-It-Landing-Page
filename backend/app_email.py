@@ -55,7 +55,7 @@ def send_email():
         db.session.commit()
         # commit to db 
 
-        send_smtp_email(name,email,message)
+        send_user_email(name,email)
 
         return jsonify({"message":"Email sent successfully"})
     
@@ -67,10 +67,10 @@ def send_email():
 
 
 
-def send_smtp_email(name,email,message):
+# def send_smtp_email(name,email,message):
     
 
-    send_user_email(name,email)
+#     send_user_email(name,email)
 
 
     # send_owner_email(name,email,message)
