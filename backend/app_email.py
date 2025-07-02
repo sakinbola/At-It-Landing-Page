@@ -2,8 +2,8 @@ from flask import Flask,request,jsonify
 from flask_cors import CORS
 import smtplib
 # simple mail transfer protocol 
-from email.mime.text import MINEText
-from email.mime.multipart import MINEMultipart 
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart 
 # mime text multipurpose internal mail extension 
 # creates message and email structure 
 import os 
@@ -57,7 +57,7 @@ def send_user_email(name,email):
 
     # recieve_email = 
 
-    msg = MINEMultipart()
+    msg = MIMEMultipart()
     msg["From"] = sender_email
     msg["To"] = sender_email 
     msg["Subject"] = f"\U0001F389 You're In! Welcome to the At-iT Beta Team"
@@ -86,14 +86,14 @@ def send_user_email(name,email):
 
     """
 
-    msg.attach(MINEText(body, "plain"))
+    msg.attach(MIMEText(body, "plain"))
 
 
-    server = smtplib.SMTP(os.getenv("EMAIL_HOST")),os.getenv("EMAIL_PORT")
+    server = smtplib.SMTP(os.getenv("EMAIL_HOST"),os.getenv("EMAIL_PORT"))
     server.starttls()
     server.login(sender_email,sender_password)
     server.send_message(msg)
-    server.quit 
+    server.quit()
 
 
 def send_owner_email(name,email,message):
@@ -102,7 +102,7 @@ def send_owner_email(name,email,message):
 
     # recieve_email = 
 
-    msg = MINEMultipart()
+    msg = MIMEMultipart()
     msg["From"] = sender_email
     msg["To"] = sender_email 
     msg["Subject"] = f"A New User has joined Information below"
@@ -115,10 +115,10 @@ def send_owner_email(name,email,message):
 
     """
 
-    msg.attach(MINEText(body,"plain"))
+    msg.attach(MIMEText(body,"plain"))
 
     server = smtplib.SMTP(os.getenv("EMAIL_HOST"),os.getenv("EMAIL_PORT"))
     server.starttls()
     server.login(sender_email,sender_password)
     server.send_message(msg)
-    server.quit 
+    server.quit()

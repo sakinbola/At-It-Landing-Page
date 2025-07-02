@@ -57,7 +57,7 @@ function Contact() {
       setSubmissionStatus("loading")
 
       try {
-        const response = await fetch("at-it-landing-page.vercel.app/api/send-email",{
+        const response = await fetch("https://at-it-landing-page.onrender.com/api/send-email",{
           method:"POST",
 
           headers: {
