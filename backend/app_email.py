@@ -9,12 +9,20 @@ from email.mime.multipart import MIMEMultipart
 import os 
 from dotenv import load_dotenv 
 # from "./src/pages/contact.jsx" import send_email_values
-
+from flask_sqlalchemy import SQLAlchemy
 
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+
+app.config["SQLALCHEMEY_DATABSE_URI"] = os.getenv("DATABSE_URL")
+# get db form .env /  configuration
+app.config["SQLALCHEMEY_TRACK_MODIFICATIONS"] = False 
+# no tracking modifications 
+
+db = SQLAlchemy(app)
+# initalize db 
 
 @app.route("/api/send-email",methods=["POST"])
 def send_email():
@@ -31,6 +39,21 @@ def send_email():
         if not message:
             message = "no message was given"
 
+        # if existing email found 
+        existing_signup = Signup.query.filter_by(email=email).first()
+        if existing_signup:
+            return jsonify({"error":"Email already signed up!"}), 409 
+        #   conflict error
+
+
+        new_signup = Signup(name=name,email=email,message=message)
+        # new signup 
+
+        db.session.add(new_signup)
+        # add to db 
+
+        db.session.commit()
+        # commit to db 
 
         send_smtp_email(name,email,message)
 
@@ -38,6 +61,8 @@ def send_email():
     
 
     except Exception as e:
+        # error occured get rid of db 
+        db.session.rollbakc()
         return jsonify({"error":str(e)}),500
 
 
@@ -48,7 +73,7 @@ def send_smtp_email(name,email,message):
     send_user_email(name,email)
 
 
-    send_owner_email(name,email,message)
+    # send_owner_email(name,email,message)
 
 
 def send_user_email(name,email):
@@ -96,29 +121,63 @@ def send_user_email(name,email):
     server.quit()
 
 
-def send_owner_email(name,email,message):
-    sender_email =  os.getenv("EMAIL_USER")
-    sender_password = os.getenv("EMAIL_PASSWORD")
+# def send_owner_email(name,email,message):
+#     sender_email =  os.getenv("EMAIL_USER")
+#     sender_password = os.getenv("EMAIL_PASSWORD")
 
-    # recieve_email = 
+#     # recieve_email = 
 
-    msg = MIMEMultipart()
-    msg["From"] = sender_email
-    msg["To"] = sender_email 
-    msg["Subject"] = f"A New User has joined Information below"
+#     msg = MIMEMultipart()
+#     msg["From"] = sender_email
+#     msg["To"] = sender_email 
+#     msg["Subject"] = f"A New User has joined Information below"
 
-    body = f"""
+#     body = f"""
 
-    Name : {name}
-    Email : {email}
-    Message : {message}
+#     Name : {name}
+#     Email : {email}
+#     Message : {message}
 
-    """
+#     """
 
-    msg.attach(MIMEText(body,"plain"))
+#     msg.attach(MIMEText(body,"plain"))
 
-    server = smtplib.SMTP(os.getenv("EMAIL_HOST"),os.getenv("EMAIL_PORT"))
-    server.starttls()
-    server.login(sender_email,sender_password)
-    server.send_message(msg)
-    server.quit()
+#     server = smtplib.SMTP(os.getenv("EMAIL_HOST"),os.getenv("EMAIL_PORT"))
+#     server.starttls()
+#     server.login(sender_email,sender_password)
+#     server.send_message(msg)
+#     server.quit()
+
+
+# define table
+class Signup(db.Model):
+    __tablename__ = "signups"
+
+    id = db.Column(db.Integer,primary_key=True)
+    # unique id 
+    name = db.Column(db.String(100),nullable=False)
+    # 100 char max cant be empty 
+    email = db.Column(db.String(120),nullable=False)
+    # email 120 char max cant be empty 
+    message = db.Column(db.Text,nullable=True)
+    # longer text can be empty 
+    created_at = db.Column(db.DateTime, server_default=db.func.now())
+    # datetime is for date and time , server default every new row create timestamp 
+    # time stamp 
+
+    def __repr__(self):
+        return f"<Signup {self.email}>"
+    
+
+
+
+# run once first time ever
+if __name__ == "__main__":
+    with app.app_context():
+        # requires app context 
+        db.create_all()
+
+        # create database initally 
+
+
+    # app.run(debug=True) for dev servers enables debugging 
