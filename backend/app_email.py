@@ -172,10 +172,10 @@ class Signup(db.Model):
 
 
 # run once first time ever
-if __name__ == "__main__":
-    with app.app_context():
-        # requires app context 
-        db.create_all()
+# if __name__ == "__main__":
+#     with app.app_context():
+#         # requires app context 
+#         db.create_all()
 
         # create database initally 
 
