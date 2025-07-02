@@ -104,7 +104,7 @@ function Contact() {
       }
 
     }
-  }
+  
 
 
   // validate name is required and email 
