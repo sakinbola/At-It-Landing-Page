@@ -57,7 +57,7 @@ function Contact() {
       setSubmissionStatus("loading")
 
       try {
-        const response = await fetch("http://localhost:5000/api/send-email",{
+        const response = await fetch("at-it-landing-page.vercel.app/api/send-email",{
           method:"POST",
 
           headers: {
