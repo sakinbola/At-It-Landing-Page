@@ -53,7 +53,7 @@ function Contact() {
     setisSubmit(true);
 
     
-    if(Object.keys(formErrors).length === 0) {
+    if(Object.keys(currentErrors).length === 0) {
       setSubmissionStatus("loading")
 
       try {
@@ -97,7 +97,7 @@ function Contact() {
           setMessageHandling("Failed to send message. Please try")
         }
         finally {
-          setSubmissionStatus("inital")
+          setSubmissionStatus("success")
         }
 
         

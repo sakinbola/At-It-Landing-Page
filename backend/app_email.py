@@ -171,13 +171,16 @@ class Signup(db.Model):
 
 
 
-# run once first time ever
+# # run once first time ever
 # if __name__ == "__main__":
 #     with app.app_context():
 #         # requires app context 
 #         db.create_all()
 
-        # create database initally 
+#         # create database initally 
 
 
-    # app.run(debug=True) for dev servers enables debugging 
+#     app.run(debug=True) 
+    
+    
+#     # for dev servers enables debugging 
