@@ -161,7 +161,7 @@ function Contact() {
                   <input type="email" 
                   id="email" 
                   name="userEmail" 
-                  placeholder="you@example.comn" 
+                  placeholder="you@example.com" 
                   value={formValues.usrEmail} 
                   onChange = {handleChange} 
                   ></input>
