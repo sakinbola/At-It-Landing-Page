@@ -8,6 +8,7 @@
     align-items:center;
     justify-content:center;
     gap:20px;
+    position:fixed;
 
 /* if screen is ridicoulsly tiny and elements need to wrap add media query future with more elements   */
     /* flex-wrap: wrap; 
