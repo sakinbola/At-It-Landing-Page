@@ -108,11 +108,8 @@ input[type="submit"]:hover {
 }
 
 .contact-image {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex: 0 1 400px; 
-    overflow: hidden; 
+    width:30vw;
+    height:auto;
     border-radius: 20px; 
 }
 
@@ -158,3 +155,10 @@ input[type="submit"]:hover {
   border: 1px solid #dee2e6;
   border-radius:8px;
 }
+
+
+/* @media (min-width:765) {
+    .contact-image {
+        width:50vw;
+    }
+} */
