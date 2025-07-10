@@ -10,6 +10,9 @@ import os
 from dotenv import load_dotenv 
 # from "./src/pages/contact.jsx" import send_email_values
 from flask_sqlalchemy import SQLAlchemy
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+
 
 load_dotenv()
 
@@ -26,6 +29,16 @@ app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'true').lower() == 'true'
 
 db = SQLAlchemy(app)
 # initalize db 
+
+
+limiter = Limiter(
+    app,
+    key_func=get_remote_address,
+    default_limits=["100 per hour"]
+)
+
+# limits by ip 
+
 
 def setup_rls():
     try:
@@ -50,6 +63,7 @@ def setup_rls():
 
 
 @app.route("/api/send-email",methods=["POST"])
+@limiter.limit("5 per minute")
 def send_email():
     try:
         data=request.get_json()
