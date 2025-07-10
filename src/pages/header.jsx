@@ -28,6 +28,11 @@ function Header() {
       }
     }, [HamburgerOpen])
 
+    // hidden stops scrolling
+    // unset allows scrolling 
+
+    // unset if element unmount 
+
 
 
   return (
