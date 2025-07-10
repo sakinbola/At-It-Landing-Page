@@ -27,6 +27,28 @@ app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'true').lower() == 'true'
 db = SQLAlchemy(app)
 # initalize db 
 
+def setup_rls():
+    try:
+        # Check if RLS policy already exists
+        result = db.engine.execute("""
+            SELECT COUNT(*) FROM pg_policies 
+            WHERE tablename = 'signups' AND policyname = 'users_own_signups';
+        """).fetchone()
+        
+        if result[0] == 0:  # Policy doesn't exist yet
+            db.engine.execute("ALTER TABLE signups ENABLE ROW LEVEL SECURITY;")
+            db.engine.execute("""
+                CREATE POLICY "users_own_signups" ON signups
+                FOR ALL USING (email = current_setting('app.current_user_email'));
+            """)
+            print("RLS setup complete!")
+        else:
+            print("RLS already configured!")
+    except Exception as e:
+        print(f"RLS setup skipped: {e}")
+
+
+
 @app.route("/api/send-email",methods=["POST"])
 def send_email():
     try:
@@ -196,3 +218,9 @@ class Signup(db.Model):
     
     
 #     # for dev servers enables debugging 
+
+
+if __name__ == "__main__":
+    with app.app_context():
+        setup_rls()
+        app.run(debug=True) 
