@@ -34,7 +34,7 @@ db = SQLAlchemy(app)
 
 
 limiter = Limiter(
-    app,
+    app=app,
     key_func=get_remote_address,
     default_limits=["100 per hour"]
 )
