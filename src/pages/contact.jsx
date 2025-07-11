@@ -57,7 +57,7 @@ function Contact() {
       // setSubmissionStatus("loading")
 
       try {
-        const response = await fetch("https://at-it-landing-page.netlify.app/api/send-email",{
+        const response = await fetch("https://at-it-landing-page.netlify.app/.netlify/functions/app_email",{
           method:"POST",
 
           headers: {
