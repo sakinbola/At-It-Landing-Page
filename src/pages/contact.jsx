@@ -54,10 +54,10 @@ function Contact() {
 
     
     if(Object.keys(currentErrors).length === 0) {
-      // setSubmissionStatus("loading")
+      setSubmissionStatus("loading")
 
       try {
-        const response = await fetch("https://at-it-landing-page.netlify.app/.netlify/functions/app_email",{
+        const response = await fetch("https://at-it-landing-page.onrender.com/api/send-email",{
           method:"POST",
 
           headers: {
@@ -81,7 +81,7 @@ function Contact() {
           setMessage("Message sent sucessfully")
 
             setFormValues(initalValues); // Reset form fields
-            // setSubmissionStatus("initial");
+            setSubmissionStatus("initial");
             setFormErrors({});      // <-- Clear errors
             setisSubmit(false);     // <-- Reset submit state
 
