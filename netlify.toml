@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "backend"
+  node_bundler = "esbuild"
+  external_node_modules = ["psycopg2-binary", "flask"]
+
+[functions."*"]
+  runtime = "python"
+  python_version = "3.10"
