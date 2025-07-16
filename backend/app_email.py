@@ -146,7 +146,7 @@ def send_user_email(name,email):
             📣 Your Voice Matters: Your feedback will directly shape the product. Help us make it better for athletes and coaches everywhere.
             
             We're currently rolling out access in waves — we’ll be in touch shortly with details on how to get started.
-            If you have any questions in the meantime, feel free to reply to this email or reach out to us at [support email or contact form link].
+            If you have any questions in the meantime, feel free to reply to this email.
             Thanks again for joining us at the ground level. We can’t wait to show you what we’ve been building.
             
             Game on,
