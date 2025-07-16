@@ -1,13 +1,24 @@
 import "./hero.css"
-
-
+import {useState,useEffect} from "react"
 
 function Hero() {
+
+  const [isLoaded,setIsLoaded] = useState(false)
+
+  useEffect(() => {
+  setTimeout(() => setIsLoaded(true), 500);
+
+    // could write a fetch data function
+        // fetchData().then(() => setIsLoaded(true));
+  },[])
+
 
   return (
 
 
-    <div className = "hero-container">
+
+
+    <div className = {`hero-container fade-in ${isLoaded ? "loaded" : ""}`}>
 
         <div className = "hero-text">
           <div className="tag1"> 
