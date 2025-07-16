@@ -119,7 +119,9 @@ def send_email():
 
 def send_user_email(name,email):
     try:
-        sender_email =  os.getenv("EMAIL_USER")
+        sender_email =  os.getenv("SENDER_EMAIL")
+
+        sender_user = os.getenv("EMAIL_USER")
         sender_password = os.getenv("EMAIL_PASSWORD")
 
         # recieve_email = 
@@ -159,7 +161,7 @@ def send_user_email(name,email):
         server = smtplib.SMTP(os.getenv("EMAIL_HOST"),os.getenv("EMAIL_PORT"))
         server.set_debuglevel(1)
         server.starttls()
-        server.login(sender_email,sender_password)
+        server.login(sender_user,sender_password)
         server.send_message(msg)
         server.quit()
 
