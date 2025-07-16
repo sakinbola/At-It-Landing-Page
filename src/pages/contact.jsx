@@ -200,7 +200,7 @@ function Contact() {
 
                 {submissionStatus === "initial" && (
                   <div>
-                    <p className="contact-submission-result initial-message"> Fill out the Form above to get early access ! </p>
+                    <p className="contact-submission-result initial-message"> Join the waitlist for beta access! </p>
                   </div>
                 )}
 
