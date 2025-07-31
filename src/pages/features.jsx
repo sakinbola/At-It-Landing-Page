@@ -62,7 +62,7 @@ function Features() {
           <h4> Share Your Game Film </h4>
           
           <div className = "p-container">
-            <p> Easily upload your game footage in just a few clicks. Whether it’s sideline, endzone, or drone view, our system is built to handle it all—fast, secure, and ready for analysis. </p>
+            <p> Easily upload your game footage in just a few clicks. Whether it’s sideline, endzone, or drone view, our system is built to handle it all fast, secure, and ready for analysis. </p>
           </div>
 
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="lower icon-upload">
@@ -89,7 +89,7 @@ function Features() {
             <h4> AI-Powered, Player-Informed Insights </h4>
 
             <div className = "p-container">
-              <p> Our advanced algorithm—built by former players and coaches—breaks down your film to uncover real-time insights on positioning, route running, coverage, accuracy, and more. It’s like having a personal coach that never sleeps </p>
+              <p> Our advanced algorithm built by former players and coaches breaks down your film to uncover real-time insights on positioning, route running, coverage, accuracy, and more. It’s like having a personal coach that never sleeps </p>
             </div>
 
             <svg  viewBox="0 0 229 229" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5" stroke="currentColor" className="lower stocks">
@@ -111,7 +111,7 @@ function Features() {
 
           <h4> Turn Feedback Into Progress </h4>
           <div className = "p-container">
-            <p> Receive a personalized improvement plan based on your performance. Train smarter with targeted drills, positional feedback, and growth tracking designed to help you level up—on and off the field. </p>
+            <p> Receive a personalized improvement plan based on your performance. Train smarter with targeted drills, positional feedback, and growth tracking designed to help you level up on and off the field. </p>
           </div>
 
           <img src={featuresimg1} alt="Green-Stripe-Pathway" className=" football-field"/>
