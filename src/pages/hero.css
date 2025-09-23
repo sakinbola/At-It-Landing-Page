@@ -24,7 +24,7 @@
 .hero-image {
     background-image: url(../img/Hero-Img-2.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     color: white;
     min-height:135vh;
     max-height:800px;
